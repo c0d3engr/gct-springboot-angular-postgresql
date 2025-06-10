@@ -1,0 +1,191 @@
+============================================
+BACKEND - JAVA
+============================================
+D:\build\java\gct
+http://localhost:8080
+
+
+
+INSERT INTO account (account_id, account_email, account_name, bcc, zeny, timestamp) 
+VALUES ('001', 'account@email.com', 'wetch', '999', '998', '2001-01-01T00:00:00');
+
+
+INSERT INTO account (account_id, account_email, account_name, bcc, zeny, timestamp) 
+VALUES ('002', 'account2@email.com', 'vetch', '999', '998', '2025-06-05T00:06:00');
+
+
+{
+        "accountId": "003",
+        "accountName": "test3",
+        "accountEmail": "test3@email.com",
+        "zeny": "998.0",
+        "bcc": "999.0",
+        "timestamp" : "2025-06-05T00:00:00"
+}
+
+
+
+"timestamp": "2025-06-05T00:00:00"
+
+retrieval @getmapping
+delete @deletemapping
+post @postmapping
+put @putmapping
+
+
+git remote add origin https://github.com/c0d3engr/gct.git
+git branch -M main
+git push -u origin main
+
+
+
+@Application.run
+Main
+create account
+read account
+update account
+delete account
+
+create list
+initiale list values	
+fetch values
+
+
+
+@Service
+AccountService
+CharacterService
+add account logic
+add character logic
+List account // store accounts directly to db 
+List character // store character directly to db 
+// do not write JDBC code inside here, user layer instead class ProductDB (another layer to communicate with db) 
+
+@Entity
+Account //represents an entity
+accountId
+accountEmail
+zeny
+bcc
+
+@Entity
+Character
+characterId
+charName
+charLevel >= 100
+charJob
+
+@Entity
+User
+userId
+userEmail
+userPw
+
+// write code JDBC 
+
+@RESTController
+@RESTgetmapping
+AccountController
+CharaterController
+UserController
+https/api
+
+
+@Respository
+
+===========================================
+FRONTEND - REACT
+===========================================
+fullstack app structure: https://www.youtube.com/watch?v=O_XL9oQ1_To&t=14s
+vite: https://www.youtube.com/shorts/Xrgddey8jcA
+
+npm create vite@latest
+choose name, react, typscript
+
+cd gct-frontend
+npm install
+npm run dev
+
+http://localhost:5173/
+ 
+
+
+D:\build\java\gct>npx create-react-app gctfrontend
+
+
+
+link local repo to github:
+
+git init
+git remote -v
+
+git remote add origin https://github.com/c0d3engr/gct-fullstack-springboot-react.git
+git branch -M main
+git push -u origin main
+
+force update: git push -f origin main
+
+git remote set-url origin <https://github.com/c0d3engr/gct-springboot-angular-postgresql.git>
+
+
+
+
+src>App.js
+
+create src/api/accountApi.js
+
+
+
+https://dashboard.render.com
+
+
+
+
+
+
+
+powershell tree structure:
+Function Show-Tree {
+    param ($Path, $Indent = "")
+
+    Get-ChildItem -Directory -Path $Path | ForEach-Object {
+        "$Indent├── $_" | Out-File -Append structure.txt
+        Show-Tree -Path $_.FullName -Indent ("$Indent│   ")
+    }
+}
+
+# Clear previous structure.txt
+Remove-Item structure.txt -ErrorAction Ignore
+
+# Run the tree from current directory
+Show-Tree -Path .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
