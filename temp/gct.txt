@@ -195,7 +195,11 @@ If possible, create a GitHub-ready version that I can use as a professional Angu
 
 
 
+Solution 1: Allow Script Execution Temporarily (Recommended)
+Run this command in PowerShell (as Administrator):
 
+powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
 
 
