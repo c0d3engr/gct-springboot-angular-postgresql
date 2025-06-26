@@ -1,0 +1,40 @@
+<div class="p-6">
+  <h2 class="text-xl font-semibold mb-4">Accounts</h2>
+
+  <!-- Create account form -->
+  <form class="mb-6 space-y-4" (ngSubmit)="createAccount()">
+    <mat-form-field appearance="outline" class="w-full">
+      <mat-label>Account Name</mat-label>
+      <input matInput [(ngModel)]="newAccount.name" name="name" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="w-full">
+      <mat-label>Balance</mat-label>
+      <input
+        matInput
+        type="number"
+        [(ngModel)]="newAccount.balance"
+        name="balance"
+        required
+      />
+    </mat-form-field>
+
+    <button mat-flat-button color="primary" type="submit">Add Account</button>
+  </form>
+
+  <!-- Account table -->
+  <table mat-table [dataSource]="accounts" class="mat-elevation-z1 w-full">
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let acc">{{ acc.name }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="balance">
+      <th mat-header-cell *matHeaderCellDef>Balance</th>
+      <td mat-cell *matCellDef="let acc">${{ acc.balance }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>
