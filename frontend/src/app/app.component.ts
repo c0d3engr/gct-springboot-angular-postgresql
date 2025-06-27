@@ -1,14 +1,21 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+
+
+
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
-  template: `
-    <div class="min-h-screen bg-gray-100 text-gray-900">
-      <router-outlet></router-outlet>
-    </div>
-  `,
+  imports: [
+    RouterOutlet,
+    MatButtonModule,
+    MatIconModule
+  ],
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
-export class AppComponent {}
+export class AppComponent {
+  protected title = 'frontend';
+}
