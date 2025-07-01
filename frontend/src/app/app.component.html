@@ -1,4 +1,24 @@
-<div class="bg-blue-500 text-white p-4 rounded-lg">Tailwind is working! 🎉</div>
+<div
+  class="min-h-screen flex flex-col bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100"
+>
+  <app-navbar></app-navbar>
 
-<button mat-raised-button color="primary">Test Angular Material</button>
-<mat-icon>home</mat-icon>
+  <main class="flex-grow px-6 py-8 max-w-6xl w-full mx-auto">
+    <!-- 
+    <div class="bg-blue-500 text-white p-4 rounded-lg">
+      Tailwind is working! 🎉
+    </div>
+
+    <button mat-raised-button color="primary">Test Angular Material</button>
+    <mat-icon>home</mat-icon>  
+    -->
+
+    <app-hero></app-hero>
+    <app-dashboard></app-dashboard>
+    <router-outlet></router-outlet>
+  </main>
+
+  <footer class="text-center py-6 text-xs text-gray-500 dark:text-gray-400">
+    © 2025 c0d3engr • Built with Angular 20 + Tailwind + Material
+  </footer>
+</div>
